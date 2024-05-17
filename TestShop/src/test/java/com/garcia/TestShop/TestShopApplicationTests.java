@@ -1,4 +1,4 @@
-package com.garcia.TestShop;
+package com.garcia.testshop;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

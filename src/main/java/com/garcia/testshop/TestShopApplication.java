@@ -1,4 +1,4 @@
-package com.garcia.TestShop;
+package com.garcia.testshop;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
