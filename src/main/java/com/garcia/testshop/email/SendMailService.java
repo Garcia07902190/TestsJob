@@ -8,11 +8,21 @@ import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
 
+/**
+ * The type Send mail service.
+ */
 @Service
 public class SendMailService {
     @Autowired
      private JavaMailSender mailSender;
 
+    /**
+     * Execute send email.
+     *
+     * @param email   the email
+     * @param subject the subject
+     * @param body    the body
+     */
     public void executeSendEmail(String email, String subject, String body){
       try {
           SimpleMailMessage message =new SimpleMailMessage();

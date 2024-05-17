@@ -24,6 +24,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.when;
 
+/**
+ * The type Test shop application tests.
+ */
 @SpringBootTest
 class TestShopApplicationTests {
 
@@ -34,6 +37,9 @@ class TestShopApplicationTests {
 	private ShopService serviceSh;
 
 
+	/**
+	 * Execute list product test.
+	 */
 	@Test
 	void executeListProductTest() {
 		when(serviceSh.executeListAllProduct()).thenReturn(new ArrayList<>());
@@ -41,11 +47,18 @@ class TestShopApplicationTests {
 		assertNotNull(rs);
 	}
 
+	/**
+	 * Execute create product test.
+	 */
 	@Test
 	void executeCreateProductTest(){
 		ResponseEntity<?> rs = shopData.executeCreateProduct(addProduct());
 		assertEquals(rs.getBody(), "Succes");
 	}
+
+	/**
+	 * Execute delete product test.
+	 */
 	@Test
 	void executeDeleteProductTest(){
 
@@ -55,6 +68,9 @@ class TestShopApplicationTests {
 		assertEquals(rs.getBody(), "Succes");
 	}
 
+	/**
+	 * Execute get page product test.
+	 */
 	@Test
 	void executeGetPageProductTest(){
 		final Pageable pagData= PageRequest.of(1,5);
@@ -65,6 +81,9 @@ class TestShopApplicationTests {
 	}
 
 
+	/**
+	 * Execute update product test.
+	 */
 	@Test
 	void executeUpdateProductTest(){
 		when(serviceSh.executeGetProduct(Mockito.anyLong())).thenReturn(getDataProduct());

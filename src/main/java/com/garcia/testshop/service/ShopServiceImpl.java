@@ -10,6 +10,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * The type Shop service.
+ */
 @Service
 public class ShopServiceImpl implements ShopService{
 
